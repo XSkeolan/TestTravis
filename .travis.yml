@@ -1,0 +1,7 @@
+script:
+  pytest
+import:
+- source: .travis/pre-build.yml
+  if: branch = dev
+- source: .travis/build.yml
+  if: branch = master
